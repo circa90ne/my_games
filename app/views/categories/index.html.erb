@@ -1,0 +1,21 @@
+<h1>Categories</h1>
+
+<% if @categories.empty? %>
+  <h2>No Categories Found</h2>
+<% else %>
+  <%= render 'search_form' %>
+  <table>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= link_to category['name'], category_path(category['id']) %></td>
+          <td><%= link_to 'Delete', category_path(category['id']), class: 'delete-item', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<br>
+
+<%= link_to 'Add New Category', new_category_path %>

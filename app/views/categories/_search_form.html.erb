@@ -1,0 +1,10 @@
+<%= form_tag("/games/search", method: 'get') do %>
+  <div>
+    <%= search_field_tag :title, nil, placeholder: 'Game Title', class: 'search' %>
+    <%= select_tag(:category_id, options_for_select(to_condensed_options(@categories)), include_blank: "All Categories") %>
+  </div>
+  <div>
+    <%= submit_tag('Search', class: 'search') %>
+  </div>
+
+<% end %>

@@ -1,0 +1,15 @@
+<h1>New Category</h1>
+
+<%= form_tag('/categories', method: 'post') do %>
+  <div class='field'>
+    <%= label_tag(:name, 'Name:') %>
+    <%= text_field_tag(:name) %>
+  </div>
+  <div>
+    <%= submit_tag('Submit', class: 'submit-btn') %>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'Back', categories_path %>

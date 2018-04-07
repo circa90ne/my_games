@@ -1,0 +1,30 @@
+<%= form_tag('/games', method: 'post') do %>
+  <div class="field">
+    <%= label_tag(:title) %>
+    <%= text_field_tag(:title) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:description) %>
+    <%= text_area_tag(:description) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:author) %>
+    <%= text_field_tag(:author) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:category_id, 'Category ID') %>
+    <%= text_field_tag(:category_id) %>
+  </div>
+
+  <div class="field">
+    <%= label_tag(:status) %>
+    <%= number_field_tag(:status) %>
+  </div>
+
+  <div>
+    <%= submit_tag('Submit', class: 'submit-btn') %>
+  </div>
+<% end %>

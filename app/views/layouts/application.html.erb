@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mygames</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+      <div class=<%= key %>><%= value %></div>
+    <% end %>
+    <%# just added these links for ease of navigation %>
+    <nav>
+      <a href="/games">Games</a>
+      <a href="/categories">Categories</a>
+    </nav>
+    <%= yield %>
+  </body>
+</html>
