@@ -1,6 +1,6 @@
 # README
 
-###File Download Solution:
+### File Download Solution:
 
 I would use the rubyzip gem and File Library in order to accomplish this task.
 
